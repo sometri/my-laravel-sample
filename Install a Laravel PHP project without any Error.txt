@@ -1,0 +1,46 @@
+Install a Laravel PHP project without any error:
+=====================
+-Download and install PHP or Xampp (Xampp has PHP)
+-I download and extract on ("C:\)
+-Set its path
+--------Check version and its path--------
+-C:\Users\somet>php -v
+or
+-C:\Users\somet>php -version
+or 
+C:\Users\somet>php --version
+
+PHP 8.3.2 (cli) (built: Jan 16 2024 20:47:57) (ZTS Visual C++ 2019 x64)
+Copyright (c) The PHP Group
+Zend Engine v4.3.2, Copyright (c) Zend Technologies
+
+C:\Users\somet>where php
+C:\php-8.3.2\php.exe
+=====================
+-Downlaod and install the Laravel composer
+-I download and install in ("C:\php-8.3.2\php.exe")
+-Set it path
+--------Check version and its path--------
+C:\Users\somet>composer --version
+or
+C:\Users\somet>composer V
+Composer version 2.7.1 2024-02-09 15:26:28
+
+C:\Users\somet>where composer
+C:\ProgramData\ComposerSetup\bin\composer
+C:\ProgramData\ComposerSetup\bin\composer.bat
+****************
+Fix somthing
+-go to: C:\php-8.3.2\php.ini and add: extension=php_zip.dll
+-and uncomment ";extension=fileinfo" as "extension=fileinfo"
+========Create a project========
+Name the project: my-laravel
+--------------------------------
+-in this directory/folder: mystudy
+C:\xampp\htdocs\mystudy>composer create-project laravel/laravel my-laravel
+--------------------------------
+-run the project
+C:\xampp\htdocs\mystudy\my-laravel>php artisan serve
+or
+http://127.0.0.1:8000
+
